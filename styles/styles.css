@@ -6,6 +6,50 @@
     line-height: 1.375;
 }
 .page-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 147px;
+    z-index: 100;
+}
+.page-header::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(222, 222, 222, 0.5);
+    @supports (backdrop-filter: blur(10px)){
+        backdrop-filter: blur(10px);
+        background-color: rgba(222, 222, 222, 0.5);
+    }
+}
+.page-header__container {
+    box-sizing: border-box;
+    position: relative;
+    margin: 0 auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    max-width: 1414px;
+    width: 100%;
+    /* display: flex;
+    align-items: center; */
+}
+.page-header__logo {
+    padding-right: 237px;
+    display: inline-block;
+    width: 202px;
+    height: 147px;
+}
+.page-header__logo-img {
+    width: 100%;
+    height: 100%;
+}
+.page-header__nav {
+    display: inline-block;
+    padding-right: 230px;
 }
 .page-header__nav-link {
     margin: 0 25px;
@@ -15,5 +59,60 @@
     line-height: 25px;
     text-decoration: none;
 }
-.page-footer {
+.page-header__user-btn {
+    box-sizing: border-box;
+    text-decoration: none;
+    padding: 15px 40px;
+    background-color: transparent;
+    border: 1px solid #1f1e1e;
+    font-size: 16px;
+    line-height: normal;
+    font-weight: 600;
+    color: #1f1e1e;
+}
+.home{
+    padding-top: 147px;
+}
+.main-header__title,
+.main-header__text{
+    padding-left: 40px;
+    padding-right: 40px;
+    color:#1F1E1E;
+    text-align: center;
+    font-family: 'Lora',sans-serif;
+    font-size: 45px;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+.main-header__title{
+    margin: 0 0 70px;
+}
+.main-header__text{
+    margin: 0 auto;
+    max-width: 948px;
+    width: 100%; 
+}
+.main-header__picture{
+    display: block;
+    margin-bottom: 70px;
+    position: relative;
+    width: 100%;
+}
+.main-header__picture::before{
+    content: '';
+    display: block;
+    width: 100%;
+    padding-top: 16.927%;
+}
+.main-header__img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.main-header{
+    padding: 100px 0;
 }
